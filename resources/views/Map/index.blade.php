@@ -1,6 +1,6 @@
 @extends('Layouts/main')
-@section('tittle_page','location')
-@section('tittle','location')
+@section('title_page','location')
+@section('title','location')
 @section('content')
 
 <button type="button" class="btn btn-outline-primary block" data-bs-toggle="modal" data-bs-target="#default">
@@ -22,16 +22,24 @@
                     <div class="modal-body">
 
                         @csrf
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required><br>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="basicInput">Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" required placeholder="Enter Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="basicInput">Latitude</label>
+                                    <input type="text" class="form-control" id="latitudes" name="latitude" required placeholder="Enter Latitude">
+                                </div>
+                                <div class="form-group">
+                                    <label for="basicInput">Longitude</label>
+                                    <input type="text" class="form-control" id="longitudes" name="longitude" required placeholder="Enter Longitude">
+                                </div>
+                            </div>
+                        </div>
 
-                        <label for="latitude">Latitude:</label>
-                        <input type="text" id="latitudes" name="latitude" required><br>
-
-                        <label for="longitude">Longitude:</label>
-                        <input type="text" id="longitudes" name="longitude" required><br>
-
-                        <a class="btn btn-primary me-1 mb-1" onclick="getLocation()">Generate Location</a>
+                        <a class="btn btn-info ml-1" onclick="getLocation()">Generate Location</a>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn" data-bs-dismiss="modal">

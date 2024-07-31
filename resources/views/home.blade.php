@@ -1,6 +1,6 @@
 @extends('Layouts/main')
-@section('tittle_page','home')
-@section('tittle','home')
+@section('title_page','home')
+@section('title','home')
 @section('content')
 <h2>blank</h2>
 @endsection

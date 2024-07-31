@@ -8,7 +8,7 @@
                         <div class="toggler">
                             <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
                         </div>
-                    </div> 
+                    </div>
                 </div>
                 <div class="sidebar-menu">
                     <ul class="menu">
@@ -29,10 +29,28 @@
                         </li>
 
                         <li class="sidebar-item  {{request ()->is('payment') ? 'active' :'' }}">
-                            <a href="" class='sidebar-link'>
+                            <a href="/payment" class='sidebar-link'>
                                 <i class="bi bi-cash"></i>
                                 <span>Payment</span>
                             </a>
+                        </li>
+
+
+
+                        <li class="sidebar-item has-sub {{request ()->is('sse','console') ? 'active' :'' }}">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-stack"></i>
+                                <span>Components</span>
+                            </a>
+                            <ul class="submenu {{request ()->is('sse','console') ? 'active' :'' }}">
+                                <li class="submenu-item {{request ()->is('console') ? 'active' :'' }}">
+                                    <a href="/console">Console</a>
+                                </li>
+                                <li class="submenu-item {{request ()->is('sse') ? 'active' :'' }}">
+                                    <a href="/sse">View</a>
+                                </li>
+
+                            </ul>
                         </li>
 
                     </ul>
