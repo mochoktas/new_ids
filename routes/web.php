@@ -25,3 +25,8 @@ Route::get('/console', [PaymentController::class, 'console']);
 Route::get('/stream', [PaymentController::class, 'stream']);
 Route::post('/console/update-antrian', [PaymentController::class, 'updateAntrian']);
 Route::post('/console/reset-antrian', [PaymentController::class, 'resetAntrian']);
+
+use App\Http\Controllers\WeatherController;
+
+Route::get('/weather', [WeatherController::class, 'index'])->name('weather.index');
+Route::post('/weather/show', [WeatherController::class, 'show'])->name('weather.show');

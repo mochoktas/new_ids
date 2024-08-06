@@ -53,6 +53,12 @@
                             </ul>
                         </li>
 
+                        <li class="sidebar-item  {{request ()->is('weather') ? 'active' :'' }}">
+                            <a href="/weather" class='sidebar-link'>
+                                <i class="bi bi-cash"></i>
+                                <span>Weather</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
