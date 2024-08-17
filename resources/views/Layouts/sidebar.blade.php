@@ -39,8 +39,8 @@
 
                         <li class="sidebar-item has-sub {{request ()->is('sse','console') ? 'active' :'' }}">
                             <a href="#" class='sidebar-link'>
-                                <i class="bi bi-stack"></i>
-                                <span>Components</span>
+                                <i class="bi bi-mic"></i>
+                                <span>SSE</span>
                             </a>
                             <ul class="submenu {{request ()->is('sse','console') ? 'active' :'' }}">
                                 <li class="submenu-item {{request ()->is('console') ? 'active' :'' }}">
@@ -55,9 +55,25 @@
 
                         <li class="sidebar-item  {{request ()->is('weather') ? 'active' :'' }}">
                             <a href="/weather" class='sidebar-link'>
-                                <i class="bi bi-cash"></i>
+                                <i class="bi bi-cloud"></i>
                                 <span>Weather</span>
                             </a>
+                        </li>
+
+                        <li class="sidebar-item has-sub {{request ()->is('coins','trending') ? 'active' :'' }}">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-server"></i>
+                                <span>Coin</span>
+                            </a>
+                            <ul class="submenu {{request ()->is('coins','trending') ? 'active' :'' }}">
+                                <li class="submenu-item {{request ()->is('coins') ? 'active' :'' }}">
+                                    <a href="/coins">List Coin</a>
+                                </li>
+                                <li class="submenu-item {{request ()->is('trending') ? 'active' :'' }}">
+                                    <a href="/trending">List Coin Trending</a>
+                                </li>
+
+                            </ul>
                         </li>
                     </ul>
                 </div>

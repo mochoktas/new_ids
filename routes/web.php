@@ -30,3 +30,11 @@ use App\Http\Controllers\WeatherController;
 
 Route::get('/weather', [WeatherController::class, 'index'])->name('weather.index');
 Route::post('/weather/show', [WeatherController::class, 'show'])->name('weather.show');
+
+use App\Http\Controllers\CoinGeckoController;
+
+Route::get('/coins', [CoinGeckoController::class, 'listCoins']);
+Route::get('/coin/{coinId}', [CoinGeckoController::class, 'coinPrice']);
+Route::get('/trending', [CoinGeckoController::class, 'listTrending']);
+Route::get('/get-coin', [CoinGeckoController::class, 'getCoin'])->name('get.coin');
+Route::get('/get-trend', [CoinGeckoController::class, 'getTrend'])->name('get.trend');
