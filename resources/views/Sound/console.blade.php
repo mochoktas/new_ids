@@ -113,7 +113,7 @@
     var inputForm = document.querySelector('.form1');
     var inputForm2 = document.querySelector('.form2');
     var inputForm3 = document.querySelector('.form3');
-    var inputTxt = document.querySelector('.txt');
+    var inputTxt = document.querySelector('.txt2');
 
     // var inputTxt = inputTxt2.value;
     var voiceSelect = document.querySelector('select');

@@ -38,3 +38,7 @@ Route::get('/coin/{coinId}', [CoinGeckoController::class, 'coinPrice']);
 Route::get('/trending', [CoinGeckoController::class, 'listTrending']);
 Route::get('/get-coin', [CoinGeckoController::class, 'getCoin'])->name('get.coin');
 Route::get('/get-trend', [CoinGeckoController::class, 'getTrend'])->name('get.trend');
+
+use App\Http\Controllers\TeknikalController;
+
+Route::get('/vokal', [TeknikalController::class, 'vokal']);
