@@ -8,7 +8,7 @@ class TeknikalController extends Controller
 {
     //
 
-    public function vokal()
+    public function vokal0()
     {
         // return view('Payment.index');
         // $kata = "Enigma Camp";
@@ -36,6 +36,24 @@ class TeknikalController extends Controller
         //     }
         // }
         // dd($jumlah_vokal);
+        $a = "asdasd";
+        dd($a);
+    }
+
+    public function vokal()
+    {
+        
+        $a = "abcdef";
+        $b = str_split($a);
+        $count = count($b);
+        print($a);
+        print_r($b);
+        $count2 = 0;
+        for ($i= $count; $i > 0 ; $i--) { 
+            $c[$i-1] = $b[$count2];
+            $count2++;
+        }
+        print_r($c);
     }
 
     //

@@ -41,4 +41,4 @@ Route::get('/get-trend', [CoinGeckoController::class, 'getTrend'])->name('get.tr
 
 use App\Http\Controllers\TeknikalController;
 
-Route::get('/vokal', [TeknikalController::class, 'vokal']);
+Route::get('/test', [TeknikalController::class, 'vokal']);
