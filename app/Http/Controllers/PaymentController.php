@@ -8,6 +8,7 @@ use Midtrans\Snap;
 use Midtrans\Notification;
 use App\Models\Order;
 use App\Models\Antrian;
+use Illuminate\Support\Facades\Log;
 use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class PaymentController extends Controller
@@ -55,8 +56,11 @@ class PaymentController extends Controller
 
     public function notificationHandler(Request $request)
     {
+        // Log::info('Midtrans Notification:', $notification);
+        // Log::info('Midtrans Notification2:', $request);
         $notification = new Notification();
 
+        
         $transactionStatus = $notification->transaction_status;
         $paymentType = $notification->payment_type;
         $orderId = $notification->order_id;

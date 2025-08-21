@@ -18,7 +18,7 @@ use App\Http\Controllers\PaymentController;
 
 Route::get('/payment', [PaymentController::class, 'index'])->name('payment.index');
 Route::post('/payment/transaction', [PaymentController::class, 'createTransaction'])->name('payment.transaction');
-Route::post('/payment/notification', [PaymentController::class, 'notificationHandler'])->name('payment.notification');
+// Route::post('/payment/notification', [PaymentController::class, 'notificationHandler'])->name('payment.notification');
 Route::post('/update-payment-status', [PaymentController::class, 'updateStatus']);
 Route::get('/sse', [PaymentController::class, 'sse']);
 Route::get('/console', [PaymentController::class, 'console']);
